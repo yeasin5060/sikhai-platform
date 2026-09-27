@@ -16,7 +16,7 @@ const RelatedCourses = ({ courses, currentCourseId }) => {
           <div
             key={course.id}
             onClick={() => {
-              navigate(`/courses/${course.id}`);
+              navigate(`/student/courses/${course.id}`);
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             className="p-4 bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-md transition cursor-pointer space-y-3 group"

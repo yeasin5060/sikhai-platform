@@ -21,7 +21,7 @@ const FeaturedCourses = () => {
           </h2>
         </div>
         <button
-          onClick={() => navigate('/courses')}
+          onClick={() => navigate('/student/courses')}
           className="text-xs sm:text-sm font-bold text-[#00A7F3] flex items-center gap-1 hover:underline cursor-pointer"
         >
           <span>View All</span>
@@ -33,7 +33,7 @@ const FeaturedCourses = () => {
         {featured.map((course) => (
           <div
             key={course.id}
-            onClick={() => navigate(`/courses/${course.id}`)}
+            onClick={() => navigate(`/student/courses/${course.id}`)}
             className="rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/60 overflow-hidden shadow-xs hover:shadow-xl hover:border-sky-300 dark:hover:border-sky-600 transition duration-300 flex flex-col justify-between cursor-pointer group"
           >
             <div>

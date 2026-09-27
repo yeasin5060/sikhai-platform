@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
           {/* Brand info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/student/home" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#00A7F3] to-sky-400 flex items-center justify-center text-white font-bold shadow-lg shadow-sky-500/20">
                 <Sparkles className="w-5 h-5" />
               </div>
@@ -67,12 +67,12 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <Link to="/courses" className="hover:text-white transition">
+                <Link to="/student/courses" className="hover:text-white transition">
                   Browse Courses
                 </Link>
               </li>
               <li>
-                <Link to="/community" className="hover:text-white transition">
+                <Link to="/student/community" className="hover:text-white transition">
                   Community Q&A
                 </Link>
               </li>
@@ -96,22 +96,22 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <Link to="/courses?category=Web%20Development" className="hover:text-white transition">
+                <Link to="/student/courses?category=Web%20Development" className="hover:text-white transition">
                   Full Stack MERN
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Data%20Science" className="hover:text-white transition">
+                <Link to="/student/courses?category=Data%20Science" className="hover:text-white transition">
                   Python & AI / ML
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Mobile%20App" className="hover:text-white transition">
+                <Link to="/student/courses?category=Mobile%20App" className="hover:text-white transition">
                   Flutter App Dev
                 </Link>
               </li>
               <li>
-                <Link to="/courses" className="hover:text-white transition">
+                <Link to="/student/courses" className="hover:text-white transition">
                   Cloud & Next.js 15
                 </Link>
               </li>

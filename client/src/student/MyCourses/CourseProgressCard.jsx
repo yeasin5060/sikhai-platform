@@ -45,7 +45,7 @@ const CourseProgressCard = ({ enrollment, course }) => {
           variant="primary"
           size="md"
           icon={PlayCircle}
-          onClick={() => navigate(`/learning/${course.id}`)}
+          onClick={() => navigate(`/student/learn/${course.id}`)}
           className="flex-1 md:flex-none"
         >
           {isCompleted ? 'Review Lectures' : 'Continue Learning'}

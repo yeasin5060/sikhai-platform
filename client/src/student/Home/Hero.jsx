@@ -11,9 +11,9 @@ const Hero = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (query.trim()) {
-      navigate(`/courses?search=${encodeURIComponent(query)}`);
+      navigate(`/student/courses?search=${encodeURIComponent(query)}`);
     } else {
-      navigate('/courses');
+      navigate('/student/courses');
     }
   };
 
@@ -51,7 +51,7 @@ const Hero = () => {
             variant="primary"
             size="lg"
             icon={ArrowRight}
-            onClick={() => navigate('/courses')}
+            onClick={() => navigate('/student/courses')}
             className="shadow-lg shadow-[#00A7F3]/25"
           >
             Explore All Courses
@@ -60,7 +60,7 @@ const Hero = () => {
             variant="outline"
             size="lg"
             icon={PlayCircle}
-            onClick={() => navigate('/community')}
+            onClick={() => navigate('/student/community')}
           >
             Join Community
           </Button>

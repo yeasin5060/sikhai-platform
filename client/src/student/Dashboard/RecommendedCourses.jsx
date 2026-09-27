@@ -12,7 +12,7 @@ const RecommendedCourses = ({ courses }) => {
         {courses.slice(1, 4).map((c) => (
           <div
             key={c.id}
-            onClick={() => navigate(`/courses/${c.id}`)}
+            onClick={() => navigate(`/student/courses/${c.id}`)}
             className="flex items-center gap-3 p-3 rounded-2xl bg-slate-50/70 dark:bg-slate-700/50 hover:bg-sky-50/50 dark:hover:bg-sky-900/30 hover:border-sky-200 dark:hover:border-sky-700 border border-slate-100 dark:border-slate-700 transition cursor-pointer group"
           >
             <img

@@ -8,7 +8,7 @@ const CourseCard = ({ course }) => {
 
   return (
     <div
-      onClick={() => navigate(`/courses/${course.id}`)}
+      onClick={() => navigate(`/student/courses/${course.id}`)}
       className="bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-xs hover:shadow-xl hover:border-sky-300 transition duration-300 flex flex-col justify-between cursor-pointer group"
     >
       <div>

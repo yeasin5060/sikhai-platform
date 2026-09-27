@@ -34,9 +34,9 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Courses', path: '/courses' },
-    { name: 'Community', path: '/community' },
+    { name: 'Home', path: '/student/home' },
+    { name: 'Courses', path: '/student/courses' },
+    { name: 'Community', path: '/student/community' },
     { name: 'My Learning', path: '/student/my-courses' },
     { name: 'Dashboard', path: '/student/dashboard' },
   ];
@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/student/home" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#00A7F3] to-sky-400 flex items-center justify-center text-white font-bold shadow-md shadow-sky-500/20">
               <Sparkles className="w-5 h-5" />
             </div>

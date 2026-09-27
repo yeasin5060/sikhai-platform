@@ -36,7 +36,7 @@ const Categories = () => {
           return (
             <div
               key={idx}
-              onClick={() => navigate(`/courses?category=${encodeURIComponent(cat.name)}`)}
+              onClick={() => navigate(`/student/courses?category=${encodeURIComponent(cat.name)}`)}
               className="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/60 hover:border-[#00A7F3] dark:hover:border-[#00A7F3] hover:shadow-md transition text-center flex flex-col items-center justify-center cursor-pointer group"
             >
               <div className={`p-3 rounded-2xl mb-3 ${cat.color} group-hover:scale-110 transition-transform`}>

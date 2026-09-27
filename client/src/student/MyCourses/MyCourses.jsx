@@ -60,7 +60,7 @@ const MyCourses = () => {
           title="No courses found in this tab"
           description="Explore our industry-aligned learning tracks and start learning today!"
           actionLabel="Browse All Courses"
-          onAction={() => navigate('/courses')}
+          onAction={() => navigate('/student/courses')}
         />
       ) : (
         <div className="space-y-4">

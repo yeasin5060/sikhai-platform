@@ -46,7 +46,7 @@ const ContinueLearning = ({ course, progress = 68 }) => {
         variant="primary"
         size="md"
         icon={PlayCircle}
-        onClick={() => navigate(`/learning/${course.id}`)}
+        onClick={() => navigate(`/student/learn/${course.id}`)}
         className="shrink-0 w-full md:w-auto"
       >
         Resume Lecture

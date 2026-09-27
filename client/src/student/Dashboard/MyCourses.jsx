@@ -30,7 +30,7 @@ const MyCourses = ({ enrolledList, courses }) => {
           return (
             <div
               key={item.courseId}
-              onClick={() => navigate(`/learning/${course.id}`)}
+              onClick={() => navigate(`/student/learn/${course.id}`)}
               className="p-4 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-white hover:border-[#00A7F3] hover:shadow-sm transition cursor-pointer space-y-3 group"
             >
               <img

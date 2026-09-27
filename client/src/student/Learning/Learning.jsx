@@ -91,7 +91,7 @@ const Learning = () => {
       {/* Top Breadcrumb Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200">
         <Link
-          to={`/courses/${course?.id}`}
+          to={`/student/courses/${course?.id}`}
           className="inline-flex items-center gap-1.5 text-xs font-bold text-[#00A7F3] hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />

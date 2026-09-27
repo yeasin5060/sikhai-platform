@@ -29,7 +29,7 @@ const CTASection = () => {
             variant="primary"
             size="lg"
             icon={ArrowRight}
-            onClick={() => navigate('/courses')}
+            onClick={() => navigate('/student/courses')}
             className="bg-white text-slate-900 hover:bg-slate-100 shadow-lg font-bold"
           >
             Start Learning Now
@@ -37,7 +37,7 @@ const CTASection = () => {
           <Button
             variant="ghost"
             size="lg"
-            onClick={() => navigate('/community')}
+            onClick={() => navigate('/student/community')}
             className="text-white hover:bg-white/10 border border-white/20"
           >
             Join Discord & Forum

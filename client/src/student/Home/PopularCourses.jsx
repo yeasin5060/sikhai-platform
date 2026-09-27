@@ -24,7 +24,7 @@ const PopularCourses = () => {
         {courses.slice(0, 4).map((course) => (
           <div
             key={course.id}
-            onClick={() => navigate(`/courses/${course.id}`)}
+            onClick={() => navigate(`/student/courses/${course.id}`)}
             className="p-4 sm:p-5 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/60 hover:border-sky-300 dark:hover:border-sky-600 hover:shadow-md transition flex flex-col sm:flex-row items-center gap-4 cursor-pointer group"
           >
             <img

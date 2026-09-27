@@ -36,11 +36,11 @@ const CourseDetails = () => {
   const handleEnroll = () => {
     dispatch(enrollInCourse({ courseId: course.id }));
     toast.success(`Enrolled successfully in ${course.title}!`);
-    navigate(`/learning/${course.id}`);
+    navigate(`/student/learn/${course.id}`);
   };
 
   const handleStartLearning = () => {
-    navigate(`/learning/${course.id}`);
+    navigate(`/student/learn/${course.id}`);
   };
 
   return (
@@ -54,7 +54,7 @@ const CourseDetails = () => {
         <div className="lg:col-span-8 space-y-8">
           <CourseOverview course={course} />
           <CourseCurriculum
-            onPreviewLesson={(lessonId) => navigate(`/learning/${course.id}`)}
+            onPreviewLesson={(lessonId) => navigate(`/student/learn/${course.id}/${lessonId}`)}
           />
           <CourseInstructor instructorName={course.instructor} />
           <CourseReviews />
