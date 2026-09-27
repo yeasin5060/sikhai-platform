@@ -1,11 +1,19 @@
-
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { Toaster } from 'react-hot-toast';
+import store from './redux/store';
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
-
-
   return (
-    <h1>hello</h1>
-  )
+    <Provider store={store}>
+      <BrowserRouter>
+        <AppRoutes />
+        <Toaster position="top-right" reverseOrder={false} />
+      </BrowserRouter>
+    </Provider>
+  );
 }
 
-export default App
+export default App;
