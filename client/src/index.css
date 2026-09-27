@@ -12,9 +12,28 @@
     font-family: var(--font-display);
   }
 
+  /* ── Light mode (default) ─────────────────────────────── */
   body {
-    background-color:#f7fafe ;
+    background-color: #f7fafe;
+    color: #1e293b;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
+  /* ── Dark mode ────────────────────────────────────────── */
+  html.dark body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+  }
+
+  /* Smooth transition on all elements */
+  html.dark * {
+    border-color: rgb(51 65 85 / 0.6);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+  html.dark ::-webkit-scrollbar-thumb { background: #334155; }
 }
