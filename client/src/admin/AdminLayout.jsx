@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { useState } from 'react';
+import { Navigate, Outlet } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import Sidebar from './Sidebar';
 import Navbar from './Navbar';
 
 const AdminLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { isAuthenticated, user } = useSelector((state) => state.auth);
+
+  if (!isAuthenticated || user?.role !== 'admin') {
+    return <Navigate to="/login" replace />;
+  }
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] flex">
+    <div className="admin-theme min-h-screen bg-[#F8FAFC] dark:bg-slate-900 flex transition-colors duration-300">
       {/* Sidebar Navigation */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 

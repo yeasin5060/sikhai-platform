@@ -1,19 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialUser = {
-  id: 'usr-admin-01',
-  name: 'Tanvir Hossain',
-  email: 'admin@sikhai.com',
-  role: 'admin',
-  avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
-};
-
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    user: initialUser,
-    token: 'mock-jwt-token-12345',
-    isAuthenticated: true,
+    user: null,
+    token: null,
+    isAuthenticated: false,
     loading: false,
     error: null,
   },

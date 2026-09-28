@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { loginSuccess } from '../redux/slices/authSlice';
@@ -25,13 +25,25 @@ const Login = () => {
     try {
       // Mock login — replace with real API call
       await new Promise((r) => setTimeout(r, 800));
+      const isAdminLogin =
+        form.email.trim().toLowerCase() === 'admin@sikhai.com' &&
+        form.password === 'Sikhai1234@';
+
       dispatch(
         loginSuccess({
-          user: { id: 'usr-01', name: 'Student User', email: form.email, role: 'student', avatar: '' },
-          token: 'mock-token-student',
+          user: isAdminLogin
+            ? {
+                id: 'usr-admin-01',
+                name: 'Tanvir Hossain',
+                email: 'admin@sikhai.com',
+                role: 'admin',
+                avatar: '',
+              }
+            : { id: 'usr-01', name: 'Student User', email: form.email, role: 'student', avatar: '' },
+          token: isAdminLogin ? 'mock-token-admin' : 'mock-token-student',
         })
       );
-      navigate('/student/dashboard');
+      navigate(isAdminLogin ? '/admin/overview' : '/student/dashboard');
     } catch {
       setError('Invalid credentials. Please try again.');
     } finally {
